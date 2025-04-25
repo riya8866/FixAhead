@@ -109,11 +109,6 @@ function getMockDetections(): Detection[] {
       bbox: { x: 20, y: 30, width: 20, height: 15 },
       class: 'pothole',
       confidence: 0.98
-    },
-    {
-      bbox: { x: 60, y: 50, width: 15, height: 10 },
-      class: 'crack',
-      confidence: 0.91
     }
   ];
 }

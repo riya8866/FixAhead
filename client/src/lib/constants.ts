@@ -2,12 +2,7 @@
 
 // Model types and classes
 export const DAMAGE_TYPES = [
-  'Pothole',
-  'Crack',
-  'Raveling',
-  'Patching',
-  'Rutting',
-  'Edge Deterioration'
+  'Pothole'
 ] as const;
 
 export type DamageType = typeof DAMAGE_TYPES[number];
@@ -80,8 +75,7 @@ export const DETECTION_COMPARISON = {
     metrics: [
       { icon: 'schedule', text: 'Detection Time: 2-5 days', color: 'text-red-400' },
       { icon: 'error', text: 'Accuracy: ~65%', color: 'text-red-400' },
-      { icon: 'payments', text: 'Cost: $450-600 per mile', color: 'text-red-400' },
-      { icon: 'category', text: 'Classification: Manual assessment', color: 'text-red-400' },
+      { icon: 'category', text: 'Pothole Identification: Manual visual inspection', color: 'text-red-400' },
     ],
   },
   ai: {
@@ -90,8 +84,7 @@ export const DETECTION_COMPARISON = {
     metrics: [
       { icon: 'schedule', text: 'Detection Time: Real-time', color: 'text-green-400' },
       { icon: 'check_circle', text: 'Accuracy: >95%', color: 'text-green-400' },
-      { icon: 'payments', text: 'Cost: $50-80 per mile', color: 'text-green-400' },
-      { icon: 'category', text: 'Classification: 6 damage types with severity', color: 'text-green-400' },
+      { icon: 'category', text: 'Pothole Identification: Automatic with confidence score', color: 'text-green-400' },
     ],
   },
 };
