@@ -45,7 +45,7 @@ export interface Detection {
     width: number;  // width (percentage of image width)
     height: number; // height (percentage of image height)
   };
-  class: string;    // class name (e.g., "pothole", "crack")
+  class: string;    // class name (e.g., "pothole")
   confidence: number; // confidence score [0-1]
 }
 
@@ -112,7 +112,7 @@ function getMockDetections(): Detection[] {
     },
     {
       bbox: { x: 60, y: 50, width: 15, height: 10 },
-      class: 'crack',
+      class: 'pothole',
       confidence: 0.91
     }
   ];
