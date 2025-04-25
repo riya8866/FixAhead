@@ -4,7 +4,7 @@ export default function TheFix() {
   return (
     <motion.section 
       id="the-fix" 
-      className="space-y-12 mt-20"
+      className="space-y-12 pt-20"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}

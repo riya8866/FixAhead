@@ -75,10 +75,15 @@ export default function Navbar() {
     >
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center mb-4 md:mb-0">
-          <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mr-3">
-            <span className="material-icons text-2xl">speed</span>
-          </div>
-          <h1 className="text-2xl font-bold text-white">Fix<span className="text-accent">Ahead</span></h1>
+          <button 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center cursor-pointer"
+          >
+            <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mr-3">
+              <span className="material-icons text-2xl">speed</span>
+            </div>
+            <h1 className="text-2xl font-bold text-white">Fix<span className="text-accent">Ahead</span></h1>
+          </button>
         </div>
         
         <div className="flex space-x-6">

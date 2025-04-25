@@ -5,7 +5,7 @@ export default function WhyItMatters() {
   return (
     <motion.section 
       id="why-it-matters" 
-      className="space-y-12"
+      className="space-y-12 pt-20"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
