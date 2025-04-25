@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 252 30% 15%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 252 79% 65%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 195 100% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 252 10% 5%;
+  --foreground: 0 0% 98%;
+  --muted: 252 20% 15%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 252 15% 10%;
+  --popover-foreground: 0 0% 98%;
+  --card: 252 15% 10%;
+  --card-foreground: 0 0% 98%;
+  --border: 252 15% 20%;
+  --input: 252 15% 20%;
+  --primary: 252 30% 15%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 252 79% 65%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 195 100% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-image: 
+      radial-gradient(circle at 25% 25%, rgba(108, 99, 255, 0.1) 0%, transparent 40%),
+      radial-gradient(circle at 75% 75%, rgba(0, 212, 255, 0.15) 0%, transparent 40%);
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-opacity-70 backdrop-blur-md border border-white/5 shadow-lg;
+    background-color: rgba(30, 27, 46, 0.7);
+  }
+  
+  .nav-link {
+    position: relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: hsl(var(--accent));
+    transition: width 0.3s ease;
+  }
+  
+  .nav-link.active::after,
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .upload-box {
+    @apply border-2 border-dashed border-white/20 transition-all duration-300;
+  }
+  
+  .upload-box:hover {
+    @apply border-secondary shadow-secondary/30;
+  }
+  
+  .confident-score {
+    background: linear-gradient(90deg, hsl(var(--secondary)) 0%, hsl(var(--accent)) 100%);
+  }
+  
+  .bounding-box {
+    @apply absolute border-2 border-accent shadow-md;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.5); }
+    70% { box-shadow: 0 0 0 5px rgba(0, 212, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); }
+  }
+}
