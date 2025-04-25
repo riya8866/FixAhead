@@ -1,0 +1,77 @@
+# Pothole Detection Website: AI Agent Instructions
+
+## Project Overview
+Create a modern web application called "FixAhead" that uses AI to detect potholes in images, videos, and camera feeds. The site should allow users to upload media or use their camera to identify road damage in real-time.
+
+## Tech Requirements
+- **Framework**: Next.js (for routing and optimal performance)
+- **Styling**: TailwindCSS
+- **Animations**: Framer Motion
+- **Model Integration**: Support for custom YOLOv11 model integration
+- **Media Handling**: Image upload, video upload, and camera access
+
+## Navigation & Structure
+Create a responsive navbar with 3 main tabs:
+1. **Why It Matters** - Information about pothole problems
+2. **The Fix** - How AI detection works
+3. **Try the Detector** - Interactive detection tool
+
+## Page Content
+
+### Why It Matters
+- Header: "Road Damage is More Than Just a Bump in the Road"
+- Content about pothole costs, hazards, and inefficient traditional detection
+- Include relevant statistics and visuals
+- Use Framer Motion animations for statistics cards
+
+### The Fix
+- Header: "AI-Powered Detection for Safer Roads"
+- Explain how the AI model works and its benefits
+- Show the detection process visually
+- Include before/after examples with animations
+
+### Try the Detector (Main Feature)
+- Header: "Test It Yourself: Upload, Scan, Detect"
+- Create three upload options:
+  1. Image upload with drag-and-drop
+  2. Video upload with playback controls
+  3. Live camera access
+- Display detection results with bounding boxes
+- Show confidence scores for detections
+- Add loading animations during processing
+
+## Model Integration Instructions
+1. Add clear code comments for model integration points
+2. Create a `models` directory with placeholder for the YOLOv11 model
+3. Implement model loading function:
+   ```javascript
+   // Example integration point
+   async function loadModel(modelPath) {
+     // Code to load YOLOv11 model
+     return model;
+   }
+   ```
+4. Create detection interface:
+   ```javascript
+   // Example detection function
+   async function detectPotholes(imageData, model) {
+     // Process image with model
+     return detections;
+   }
+   ```
+5. Include instructions for converting PyTorch model to web format (ONNX.js)
+
+## UI/UX Guidelines
+- Use dark mode theme with primary color: #1e1b2e
+- Apply glassmorphism effect to cards and sections
+- Create smooth transitions between pages
+- Ensure responsive design (mobile-first approach)
+- Add loading spinners during model processing
+- Use motion.div for animated components
+
+## Additional Requirements
+- Ensure all media handling includes appropriate error messages
+- Include a footer with attribution and GitHub link
+- Add helpful tooltips for the detection interface
+- Create a "How to Use" section with step-by-step instructions
+- Ensure accessibility compliance
