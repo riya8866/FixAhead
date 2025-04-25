@@ -232,7 +232,7 @@ export default function TheFix() {
                 </div>
                 <div className="flex items-center text-red-400">
                   <span className="material-icons mr-2 text-sm">category</span>
-                  <p className="text-sm">Classification: Manual assessment</p>
+                  <p className="text-sm">Pothole Identification: Manual visual inspection</p>
                 </div>
               </div>
             </div>
@@ -263,13 +263,7 @@ export default function TheFix() {
                   transition={{ duration: 0.5, delay: 0.4 }}
                   viewport={{ once: true }}
                 />
-                <motion.div 
-                  className="absolute top-[80px] right-[100px] w-20 h-14 bounding-box rounded-sm"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.6 }}
-                  viewport={{ once: true }}
-                />
+
                 
                 <motion.div 
                   className="absolute top-[15px] left-[85px] bg-black bg-opacity-70 rounded px-2 py-1 text-xs"
@@ -280,15 +274,7 @@ export default function TheFix() {
                 >
                   Pothole: 96%
                 </motion.div>
-                <motion.div 
-                  className="absolute top-[85px] right-[125px] bg-black bg-opacity-70 rounded px-2 py-1 text-xs"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.7 }}
-                  viewport={{ once: true }}
-                >
-                  Crack: 89%
-                </motion.div>
+
               </div>
               <div className="space-y-2">
                 <div className="flex items-center text-green-400">
@@ -299,13 +285,10 @@ export default function TheFix() {
                   <span className="material-icons mr-2 text-sm">check_circle</span>
                   <p className="text-sm">Accuracy: &gt;95%</p>
                 </div>
-                <div className="flex items-center text-green-400">
-                  <span className="material-icons mr-2 text-sm">payments</span>
-                  <p className="text-sm">Cost: $50-80 per mile</p>
-                </div>
+
                 <div className="flex items-center text-green-400">
                   <span className="material-icons mr-2 text-sm">category</span>
-                  <p className="text-sm">Classification: 6 damage types with severity</p>
+                  <p className="text-sm">Pothole Identification: Automatic with confidence score</p>
                 </div>
               </div>
             </div>

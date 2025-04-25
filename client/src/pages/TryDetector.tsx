@@ -152,7 +152,7 @@ export default function TryDetector() {
                     {/* Sample detection boxes for demo */}
                     <div className="absolute top-[30%] left-[20%] w-[20%] h-[15%] bounding-box rounded-sm"></div>
                     <div className="absolute top-[30%] left-[20%] bg-black bg-opacity-70 rounded px-2 py-1 text-xs">
-                      Analyzing...
+                      Pothole: 92%
                     </div>
                   </div>
                   <button 
@@ -197,34 +197,14 @@ export default function TryDetector() {
         <h3 className="text-2xl font-bold mb-6">About Our Model</h3>
         
         <p className="text-gray-300 mb-6">
-          FixAhead uses a custom-trained YOLOv11 object detection model optimized specifically for road damage detection. 
-          The model has been trained on over 100,000 annotated images of various road conditions and can identify:
+          FixAhead uses a custom-trained YOLOv11 object detection model optimized specifically for pothole detection. 
+          The model has been trained on thousands of annotated road images and can accurately identify potholes in various lighting and weather conditions.
         </p>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-          <div className="bg-primary-dark rounded-lg p-3 flex items-center">
-            <span className="material-icons text-accent mr-2">check_circle</span>
-            <span>Potholes</span>
-          </div>
-          <div className="bg-primary-dark rounded-lg p-3 flex items-center">
-            <span className="material-icons text-accent mr-2">check_circle</span>
-            <span>Cracks</span>
-          </div>
-          <div className="bg-primary-dark rounded-lg p-3 flex items-center">
-            <span className="material-icons text-accent mr-2">check_circle</span>
-            <span>Raveling</span>
-          </div>
-          <div className="bg-primary-dark rounded-lg p-3 flex items-center">
-            <span className="material-icons text-accent mr-2">check_circle</span>
-            <span>Patching</span>
-          </div>
-          <div className="bg-primary-dark rounded-lg p-3 flex items-center">
-            <span className="material-icons text-accent mr-2">check_circle</span>
-            <span>Rutting</span>
-          </div>
-          <div className="bg-primary-dark rounded-lg p-3 flex items-center">
-            <span className="material-icons text-accent mr-2">check_circle</span>
-            <span>Edge Deterioration</span>
+        <div className="mb-8 flex justify-center">
+          <div className="bg-primary-dark rounded-lg p-4 inline-flex items-center">
+            <span className="material-icons text-accent mr-2 text-xl">check_circle</span>
+            <span className="text-lg">Pothole Detection</span>
           </div>
         </div>
         
@@ -235,7 +215,7 @@ export default function TryDetector() {
   inputSize: 640,
   scoreThreshold: 0.25,
   iouThreshold: 0.45,
-  classes: ['pothole', 'crack', 'raveling', 'patching', 'rutting', 'edge']
+  classes: ['pothole']
 };`}
 
 <span className="text-accent-light">// Model loading and inference are implemented in /src/models/detector.ts</span>
