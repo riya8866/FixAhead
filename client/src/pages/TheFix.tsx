@@ -222,8 +222,14 @@ export default function TheFix() {
                   <span className="material-icons mr-2 text-sm">schedule</span>
                   <p className="text-sm">Detection Time: 2-5 days</p>
                 </div>
-
-
+                <div className="flex items-center text-red-400">
+                  <span className="material-icons mr-2 text-sm">error</span>
+                  <p className="text-sm">Accuracy: ~65%</p>
+                </div>
+                <div className="flex items-center text-red-400">
+                  <span className="material-icons mr-2 text-sm">payments</span>
+                  <p className="text-sm">Cost: $450-600 per mile</p>
+                </div>
                 <div className="flex items-center text-red-400">
                   <span className="material-icons mr-2 text-sm">category</span>
                   <p className="text-sm">Pothole Identification: Manual visual inspection</p>
@@ -275,7 +281,10 @@ export default function TheFix() {
                   <span className="material-icons mr-2 text-sm">schedule</span>
                   <p className="text-sm">Detection Time: Real-time</p>
                 </div>
-
+                <div className="flex items-center text-green-400">
+                  <span className="material-icons mr-2 text-sm">check_circle</span>
+                  <p className="text-sm">Accuracy: &gt;95%</p>
+                </div>
 
                 <div className="flex items-center text-green-400">
                   <span className="material-icons mr-2 text-sm">category</span>
